@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+data/db/
+data/raw/
+out/
+config/config.yaml
+.venv/

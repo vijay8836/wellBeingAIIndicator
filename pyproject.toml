@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wellbeing-ai"
+version = "1.0.0"
+description = "Local-first physical and mental wellbeing tracking from your own data exports"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scikit-learn>=1.3",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.40"]
+excel = ["openpyxl>=3.1"]
+
+[project.scripts]
+wellbeing-ai = "wellbeing_ai.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["wellbeing_ai*"]
